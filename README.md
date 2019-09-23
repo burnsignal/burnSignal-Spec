@@ -61,11 +61,19 @@ Each profile image should be replaced by its blockie on hover.
 
 ## Routes
 There following routes exist in the dapp, all others should 404.
+
 `/` --> `/home`
-`/home` --> The application's home feed
+
+`/home` --> The application's home feed.
+
 `/new/poll` --> The "new poll" modal, which should render over whichever page is already displayed (or the home feed as a fallback).
-`/{ethAddress}` --> the user profile corresponding to `ethAddress`
+
+`/{ethAddress}` --> the user profile corresponding to `ethAddress`.
+
 `/{ENSDomain}` --> the user profile corresponding to the ethereum address that `ENSDomain` resolves to.
-`/{ethAddress}/poll/{pollAddress}` --> the poll page for the poll at ethereum address `pollAddress`
-`/{ethAddress}/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`
-`/{ethAddress}/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`
+
+`/{ethAddress}/poll/{pollAddress}` --> the poll page for the poll at ethereum address `pollAddress`.
+
+`/{ethAddress}/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`.
+
+`/{ethAddress}/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`.
