@@ -17,12 +17,37 @@ Most profile data will be sourced from 3Box.
 ### BrightID
 BrightID will be used a an oracle for uniqueness.
 ### TheGraph
-TheGraph will be used to populate feeds with poll and vote data.
+TheGraph's GraphQL API will be used to populate feeds with poll and vote data.
 
 ## Home
-todo
+The home page `/home` consists primarily of a feed of use created polls. The home page also includes a "New Poll" button and a "Search" field.
+The feed should progressively load content as the user scrolls.
 
 ### Polls
+Polls should be sorted in reverse chronological order.
+Each poll should include:
+- A profile image and display name of the user who created it (or a blockie and truncated ethereum address if no 3Box data is available). Each of these elements should link to the user's profile.
+- How long the poll has been running
+    - < 1 minute ago = "Just now"
+    - >= 1 & < 60 minutes ago = {minutesSincePost}+"m"
+        - e.g. 20m
+    - >= 1 & < 24 hours ago = {hoursSincePost}+"h"
+        - e.g. 10h
+    - >= 1 day ago = {month}+" "+{day}+", "+{year}
+        - e.g. Jan 10, 2018
+- The poll's text
+- "Yes" and "No" buttons that open the poll's `/{ethAddress}/poll/{pollAddress}/yes` and `/{ethAddress}/poll/{pollAddress}/no` modals, respectively.
+- Unique voter count
+- Total ETH burned
+- "Results" text that, on hover, displays the current results of the poll in place of the "Yes" and "No" buttons.
+
+### Search Field
+The search field should filter results based on a `pollID`, `pollAddress`, and `pollText`.
+
+### New Poll Button
+The "New Poll" button should open the "new poll" modal, which should render over whichever page is already displayed (or the home feed as a fallback if `/new/poll` was navigated to directly).
+
+## Polls
 todo
 
 ## Profiles
@@ -59,6 +84,12 @@ In the case where a BrightID score is not found, it will read "None".
 ### Blockies
 Each profile image should be replaced by its blockie on hover.
 
+## New Poll Modal
+todo
+
+## Vote Yes/No Modal
+Todo
+
 ## Routes
 There following routes exist in the dapp, all others should 404.
 
@@ -74,6 +105,7 @@ There following routes exist in the dapp, all others should 404.
 
 `/{ethAddress}/poll/{pollAddress}` --> the poll page for the poll at ethereum address `pollAddress`.
 
-`/{ethAddress}/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`.
+`/{ethAddress}/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the `/{ethAddress}/poll/{pollAddress}` page if navigated to directly.
 
-`/{ethAddress}/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`.
+
+`/{ethAddress}/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the `/{ethAddress}/poll/{pollAddress}` page if navigated to directly.
