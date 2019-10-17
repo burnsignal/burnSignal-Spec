@@ -1,10 +1,13 @@
 # Burner Vote Web App MVP Specification
 ## Contents
-1. Data sources
-1. Home
-1. Polls
-1. Profiles
-1. Routes
+1. [Overview](https://github.com/BurnerVote/BurnerVoteSpec#overview)
+1. [Routes](https://github.com/BurnerVote/BurnerVoteSpec#routes)
+1. [Data sources](https://github.com/BurnerVote/BurnerVoteSpec#data-sources)
+1. [Basic Elements](https://github.com/BurnerVote/BurnerVoteSpec#basic-elements)
+1. [Home](https://github.com/BurnerVote/BurnerVoteSpec#home)
+1. [Poll Pages](https://github.com/BurnerVote/BurnerVoteSpec#poll-pages)
+1. [Profile Pages](https://github.com/BurnerVote/BurnerVoteSpec#profile-pages)
+1. [Modals](https://github.com/BurnerVote/BurnerVoteSpec#modals)
 
 ## Overview
 This document is the specification for the Burner Vote MVP Web Application, often referred to herein as "the application". Where this specification is insufficient or vague, the [figma prototype](https://www.figma.com/file/9V9NnnJ5qbS22QKVFe2Eao/Burner-Vote?node-id=0%3A1) should be used as a reference. That failing, Twitter's desktop browser UI and UX should serve as a reference, where applicable. And, where any ambiguity remains, [@auryn-macmillan](https://github.com/auryn-macmillan) should be consulted for clarity.
@@ -139,7 +142,7 @@ On the profile page, the
 - URL
 - Verified Twitter account
 - Verified Github account
-- [BrightID](https://brightid.org) score
+- [BrightID](https://brightid.org) verified check-mark if the ethereum address is verified on BrightID for the BurnerVote context.
 
 ### Feed
 The feed displayed on a user's profile will include all polls created by that user, displayed in reverse chronological order.
@@ -156,14 +159,12 @@ The application will import the following user profile information from 3Box:
 
 In cases where a 3Box profile does not exist (or has not yet loaded), the application will simply fallback to using the etherurm address in place of Name and the ethereum address's [blockie](https://github.com/petejkim/ethereum-blockies-png) in place of a Profile Image. All other fields will be not be displayed.
 
-### BrightID
-In the case where a BrightID score is not found, it will read "None".
-
 ### Blockies
 Each profile image should be replaced by its blockie on hover.
 
-## New Poll Modal
+## Modals
+### New Poll Modal
 todo
 
-## Vote Yes/No Modal
+### Vote Yes/No Modal
 Todo
