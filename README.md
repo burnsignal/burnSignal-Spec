@@ -113,7 +113,7 @@ Below that, there should be a variety of visualizations for the current results 
 This should include:
 - Number of unique voters
 - Total ETH burned
-- A pie chart of the quadratic vote results as percentages (each unique user's vote is weighted quadratically based on the amount of ETH they burned, where 1 vote = 0.00005 ETH / roughly $0.01 USD). Users can vote more than once, the value of each of their votes should be totaled and counted as one vote, with the weight determined quadratically from the total.
+- A pie chart of the quadratic vote results as percentages (each unique user's vote is weighted quadratically based on the amount of ETH they burned, where 1 vote = [1 WEI](https://gwei.io/)). Users can vote more than once, the value of each of their votes should be totaled and counted as one vote, with the weight determined quadratically from the total.
 - A pie chart of the democratic vote results as percentages (each unique user has one vote). Users can vote more than once, but only their most recent vote counts.
 - A pie chart of the coin weighted vote results as percentages (the total ETH burned for each option; `yes` and `no`).
 
