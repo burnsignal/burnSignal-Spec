@@ -86,7 +86,7 @@ i.e. clicking anywhere on a poll item, that is not explicitly a link to somewher
 #### Burner Vote Logo
 A burner vote logo that links to `/home`
 #### New Poll Button
-The "New Poll" button should open the "new poll" modal (`/new/poll`), which should render over the contents of whichever page is already displayed.
+The "New Poll" button should open the "new poll" modal (`/new/poll`), which should render over the contents of whichever page is already displayed or over the contents of `/home` if it was navigated to directly.
 
 ### Right Gutter
 In the MVP version, the right gutter is empty.
@@ -164,11 +164,21 @@ The application will import the following user profile information from 3Box:
 In cases where a 3Box profile does not exist (or has not yet loaded), the application will simply fallback to using the etherurm address in place of Name and the ethereum address's [blockie](https://github.com/petejkim/ethereum-blockies-png) in place of a Profile Image. All other fields will be not be displayed.
 
 ### Blockies
-Each profile image should be replaced by its blockie on hover.
+Each profile image should be replaced by its associated ethereum account's blockie image on hover.
 
 ## Modals
 ### New Poll Modal
-todo
+The "new poll" modal is accessed by clicking the "New Poll" button in the left gutter and should render over whichever page is already displayed or over the contents of `/home` if it was navigated to directly.
+
+The profile page should include the profile image of the current user, along with a form to create the new poll.
+
+The fields are:
+- Question
+  - String, 300 character max.
+- Deadline
+  - date/block toggle and selector
+- Post button
+  - Publishes the poll to the blockchain
 
 ### Vote Yes/No Modal
 Todo
