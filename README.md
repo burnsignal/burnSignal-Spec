@@ -126,9 +126,13 @@ Any 40 character hexadecimal string prepended by "0x" will be treated as an ethe
 Any string that is not a 40 character hexadecimal string will be assumed to be an ENS domain, regardless of whether `.eth` is appended.
 
 e.g.
+
 `/0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb` would resolve to `/0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb`
+
 `/0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb.eth` would resolve to the profile of whichever ethereum address is pointed to by `0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb.eth`
+
 `/barry` would resolve to the profile of whichever ethereum address is pointed to by `barry.eth`
+
 `/barry.eth` would resolve to the profile of whichever ethereum address is pointed to by `barry.eth`
 
 ### Profile Details
