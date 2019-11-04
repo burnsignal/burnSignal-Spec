@@ -1,16 +1,16 @@
-# Burner Vote Web App MVP Specification
+# Burn Signal Web App MVP Specification
 ## Contents
-1. [Overview](https://github.com/BurnerVote/BurnerVoteSpec#overview)
-1. [Routes](https://github.com/BurnerVote/BurnerVoteSpec#routes)
-1. [Data sources](https://github.com/BurnerVote/BurnerVoteSpec#data-sources)
-1. [Basic Elements](https://github.com/BurnerVote/BurnerVoteSpec#basic-elements)
-1. [Home](https://github.com/BurnerVote/BurnerVoteSpec#home)
-1. [Poll Pages](https://github.com/BurnerVote/BurnerVoteSpec#poll-pages)
-1. [Profile Pages](https://github.com/BurnerVote/BurnerVoteSpec#profile-pages)
-1. [Modals](https://github.com/BurnerVote/BurnerVoteSpec#modals)
+1. [Overview](https://github.com/burnSignal/burnSignal-Spec#overview)
+1. [Routes](https://github.com/burnSignal/burnSignal-Spec#routes)
+1. [Data sources](https://github.com/burnSignal/burnSignal-Spec#data-sources)
+1. [Basic Elements](https://github.com/burnSignal/burnSignal-Spec#basic-elements)
+1. [Home](https://github.com/burnSignal/burnSignal-Spec#home)
+1. [Poll Pages](https://github.com/burnSignal/burnSignal-Spec#poll-pages)
+1. [Profile Pages](https://github.com/burnSignal/burnSignal-Spec#profile-pages)
+1. [Modals](https://github.com/burnSignal/burnSignal-Spec#modals)
 
 ## Overview
-This document is the specification for the Burner Vote MVP Web Application, often referred to herein as "the application". Where this specification is insufficient or vague, the [figma prototype](https://www.figma.com/file/9V9NnnJ5qbS22QKVFe2Eao/Burner-Vote?node-id=0%3A1) should be used as a reference. That failing, Twitter's desktop browser UI and UX should serve as a reference, where applicable. And, where any ambiguity remains, [@auryn-macmillan](https://github.com/auryn-macmillan) should be consulted for clarity.
+This document is the specification for the Burn Signal MVP Web Application, often referred to herein as "the application". Where this specification is insufficient or vague, the [figma prototype](https://www.figma.com/file/9V9NnnJ5qbS22QKVFe2Eao/Burner-Vote?node-id=0%3A1) should be used as a reference. That failing, Twitter's desktop browser UI and UX should serve as a reference, where applicable. And, where any ambiguity remains, [@auryn-macmillan](https://github.com/auryn-macmillan) should be consulted for clarity.
 
 Wherever possible, and ideally without compromise, the application should run client-side with data hosted on public and trustless (trust minimized) sources. The current state of the application should be permissionlessly reconstructable by any user whether they are running the application locally or using our hosted version.
 
@@ -83,8 +83,8 @@ Each poll item should be clickable and link to the relevant poll's page (`/{ethA
 i.e. clicking anywhere on a poll item, that is not explicitly a link to somewhere else (profile details, buttons, etc), should navigate the user to the relevant poll's page.
 
 ### Left Gutter
-#### Burner Vote Logo
-A burner vote logo that links to `/home`
+#### Burn Signal Logo
+A Burn Signal logo that links to `/home`
 #### New Poll Button
 The "New Poll" button should open the "new poll" modal (`/new/poll`), which should render over the contents of whichever page is already displayed or over the contents of `/home` if it was navigated to directly.
 
@@ -146,7 +146,7 @@ On the profile page, the
 - URL
 - Verified Twitter account
 - Verified Github account
-- [BrightID](https://brightid.org) verified check-mark if the ethereum address is verified on BrightID for the BurnerVote context.
+- [BrightID](https://brightid.org) verified check-mark if the ethereum address is verified on BrightID for the Burn Signal context.
 
 ### Feed
 The feed displayed on a user's profile will include all polls created by that user, displayed in reverse chronological order.
