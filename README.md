@@ -27,11 +27,11 @@ The following routes exist in the dapp, all others should 404 gracefully.
 
 `/{ENSDomain}` --> the user profile corresponding to the ethereum address that `ENSDomain` resolves to.
 
-`/{ethAddress}/poll/{pollAddress}` --> the poll page for the poll at ethereum address `pollAddress`.
+`/poll/{pollAddress}` --> the poll page for the poll at ethereum address `pollAddress`.
 
-`/{ethAddress}/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the contents of `/{ethAddress}/poll/{pollAddress}` page if navigated to directly.
+`/poll/{pollAddress}/yes` --> the "yes" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the contents of `/poll/{pollAddress}` page if navigated to directly.
 
-`/{ethAddress}/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the contents of `/{ethAddress}/poll/{pollAddress}` page if navigated to directly.
+`/poll/{pollAddress}/no` --> the "no" voting information for the poll at ethereum address `pollAddress`. Displayed as a modal over the current page, or over the contents of `/poll/{pollAddress}` page if navigated to directly.
 
 `/404` --> A 404 page containing all of the basic elements listed below, along with a lighthearted message.
 
@@ -51,17 +51,17 @@ These elements are common to most pages, although their contents may vary slight
 Displayed on the left side of the Nav Bar is a title for the current page.
 The title should be "Home" for the home page, "Poll" for a poll page, or `{username}` for a profile page.
 The title should link back to the current page.
-e.g. The title on the home page should link to `/home`, the title on a poll's page should link to `/{ethAddress}/poll/{pollAddress}`, etc.
+e.g. The title on the home page should link to `/home`, the title on a poll's page should link to `/poll/{pollAddress}`, etc.
 
 #### Search Field
 The search field is a single line text entry box that should filter the feed based on a `pollAddress`, `pollText`, `username` of creator, or `ethereumAddress` of creator.
-The search field is not displayed on poll pages (`/{ethAddress}/poll/{pollAddress}`).
+The search field is not displayed on poll pages (`/poll/{pollAddress}`).
 
 #### Back Button
 The back button is displayed on all pages other than `/home` and should link back to `/home`. It should be placed to the left of the title.
 
 #### Activity Feed
-The activity feed contains the primary content of each page, which consists of a feed of relevant polls, and some additional visualizations in the case of a poll's page (`/{ethAddress}/poll/{pollAddress}`).
+The activity feed contains the primary content of each page, which consists of a feed of relevant polls, and some additional visualizations in the case of a poll's page (`/poll/{pollAddress}`).
 
 ### Poll Items
 Each poll items should include:
@@ -75,11 +75,11 @@ Each poll items should include:
     - >= 1 day ago = {month}+" "+{day}+", "+{year}
         - e.g. Jan 10, 2018
 - The poll's text
-- "Yes" and "No" buttons that open the poll's `/{ethAddress}/poll/{pollAddress}/yes` and `/{ethAddress}/poll/{pollAddress}/no` modals, respectively.
+- "Yes" and "No" buttons that open the poll's `/poll/{pollAddress}/yes` and `/poll/{pollAddress}/no` modals, respectively.
 - Unique voter count
 - Total ETH burned
 - "Results" text that, on hover, displays the current results of the poll, weighted quadratically, in place of the "Yes" and "No" buttons.
-Each poll item should be clickable and link to the relevant poll's page (`/{ethAddress}/poll/{pollAddress}`).
+Each poll item should be clickable and link to the relevant poll's page (`/poll/{pollAddress}`).
 i.e. clicking anywhere on a poll item, that is not explicitly a link to somewhere else (profile details, buttons, etc), should navigate the user to the relevant poll's page.
 
 ### Left Gutter
@@ -104,7 +104,7 @@ If volume or spam becomes an issue, we may need to introduce some default qualit
 In future iterations, we may introduce the ability to follow users and/or hashtags, in which case this feed may become more personalized.
 
 ## Poll Pages
-Each poll should have its own dedicated page who's route is `/{ethAddress}/poll/{pollAddress}`.
+Each poll should have its own dedicated page who's route is `/poll/{pollAddress}`.
 
 ### Activity Feed
 The first item in the activity feed on a poll page is the relevant [poll item]().
