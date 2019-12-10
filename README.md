@@ -10,12 +10,12 @@
 1. [Modals](https://github.com/burnSignal/burnSignal-Spec#modals)
 
 ## Overview
-This document is the specification for the Burn Signal MVP Web Application, often referred to herein as "the application". Where this specification is insufficient or vague, the [figma prototype](https://www.figma.com/file/9V9NnnJ5qbS22QKVFe2Eao/Burner-Vote?node-id=0%3A1) should be used as a reference. That failing, Twitter's desktop browser UI and UX should serve as a reference, where applicable. And, where any ambiguity remains, [@auryn-macmillan](https://github.com/auryn-macmillan) should be consulted for clarity.
+This document is the specification for the Burn Signal MVP Web Application, often referred to herein as "the application" or "the dapp". Where this specification is insufficient or vague, the [figma prototype](https://www.figma.com/file/9V9NnnJ5qbS22QKVFe2Eao/Burner-Vote?node-id=0%3A1) should be used as a reference. That failing, Twitter's desktop browser UI and UX should serve as a reference, where applicable. And, where any ambiguity remains, [@auryn-macmillan](https://github.com/auryn-macmillan) should be consulted for clarity.
 
 Wherever possible, and ideally without compromise, the application should run client-side with data hosted on public and trustless (trust minimized) sources. The current state of the application should be permissionlessly reconstructable by any user whether they are running the application locally or using our hosted version.
 
 ## Routes
-There following routes exist in the dapp, all others should 404 gracefully.
+The following routes exist in the dapp, all others should 404 gracefully.
 
 `/` --> `/home`
 
