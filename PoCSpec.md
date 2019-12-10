@@ -4,11 +4,8 @@
 1. [Overview](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#overview)
 1. [Routes](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#routes)
 1. [SubGraph](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#subgraph)
-1. [Basic Elements](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#basic-elements)
-1. [Home](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#home)
-1. [Poll Pages](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#poll-pages)
-1. [Profile Pages](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#profile-pages)
-1. [Modals](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#modals)
+1. [BrightID](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#brightid)
+1. [Elements](https://github.com/burnSignal/burnSignal-Spec/blob/master/PoCSpec.md#elements)
 
 ## Overview
 This document specifies the Burn Signal PoC web application, referred to herein as "the dapp".
