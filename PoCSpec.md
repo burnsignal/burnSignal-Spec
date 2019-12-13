@@ -18,7 +18,13 @@ The following routes exist in the dapp, all others should 404 gracefully and red
 
 `/` --> `/poll/{pollAddress}`
 
-`/poll/{pollAddress}` --> Poll page for the featured poll.{pollAddress} is the ethereum address of the featured poll.
+`/poll/{pollAddress}` --> Poll page for the featured poll {pollAddress} is the ethereum address of the featured poll.
+
+`/poll/{pollAddress}/{option}` --> voting modal for the poll.
+
+`/about` --> a modal with some basic information on Burn Signal.
+
+`/login` --> the web3connect login modal.
 
 ## SubGraph
 ### Mappings
@@ -39,14 +45,56 @@ We should also create subscriptions for the most of our mappings so that vote da
 
 
 ## Brightid
+BrightID will be used to verify votes.
+For each address that has voted, we should call `http://node.brightid.org/brightid/verification/ethereum/{address}`.
+You can check out the documentation for the BrightID API [here](https://app.swaggerhub.com/apis/brightid/brightid/1.0.0#/default/get_verification__context___id_).
+
+
+If the address is verified, the response will look like this:
+```
+{
+  "data": {
+    "timestamp": 0
+  }
+}
+```
+
+An if no verification is found, the response will look like this:
+
+```
+{
+  "error": true,
+  "errorNum": 404,
+  "errorMessage": "Verification not found",
+  "code": 404
+}
+```
 
 ## Elements
 ### Nav Bar
+The nav bar contains two elements, the Burn Signal logo (which should be a hyperlink to `/`) and a user avatar with a dropdown menu.
 
-### Poll Description and Options
+The dropdown menu items are:
+- about --> `/about`
+- blog --> `https://blog.burnsignal.io`
+- login | logout --> `/login` | log the user out.
+
+### Poll Details
+We should pull the data for this section from our subgraph.
+
+Title = name
+Description = data
+
+"Yes" button --> `/poll/{pollAddress}/yes`
+"No" button --> `/poll/{pollAddress}/no`
+If the user is not authenticated, then the modal will display a QR code and a warning to only send funds from a BrightID verified address. If the user is authenticated, we should check whether their address is verified. If yes, a voting modal should be opened. If no, then we should show a modal with instructions for linking BrightID.
 
 ### Bar Chart
 
 ### Line Chart
 
 ### Vote Modal
+
+### Login Modal
+
+### About Modal
